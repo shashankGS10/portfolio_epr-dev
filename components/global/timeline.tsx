@@ -5,7 +5,7 @@ import {
   motion,
 } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
-import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card"
+import { Card, CardHeader, CardDescription, CardContent, CardFooter } from "@/components/ui/card"
 
 
 interface TimelineContent {

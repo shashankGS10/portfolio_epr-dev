@@ -7,7 +7,7 @@ import { techStackImages , projectData, products} from "@/lib/constant";
 import { HeroParallax } from "@/components/global/connect-parallax";
 import { LampEffect } from '@/components/global/lamp-effect';
 import { Timeline } from "@/components/global/timeline";
-import { CardBody, CardContainer, CardItem } from '@/components/global/price-plan-card';
+import { CardBody, CardContainer, CardItem } from '@/components/global/acomp-card';
 import { CheckIcon } from 'lucide-react';
 import InfoBar from "@/components/infobar/"
 

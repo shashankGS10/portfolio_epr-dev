@@ -105,7 +105,7 @@ export const Header = () => {
   return (
     <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full  left-0 top-0">
       <h1 className="text-2xl md:text-7xl font-bold dark:text-white">
-        Hello! 👋 <br /> I'm Shashank
+        Hello! 👋 <br /> I&apos;m Shashank
       </h1>
       <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">
       Over the past 5 years, I’ve been working with React.js, React Native and Node.js, preferably Front End Web and Mobile development. I co-founded Kampao.in, a SaaS platform that helps blue-collar workers to find jobs. Have been part of Entrepreneurship programs led by IIM Bangalore and T-Hub Hyderabad to ensure product market fit and agile development of SaaS product. Proven ability to lead UI development teams and deliver quality, user-centric products.

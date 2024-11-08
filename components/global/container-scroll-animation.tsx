@@ -14,22 +14,7 @@ export const ContainerScroll = ({
     target: containerRef,
   })
 
-  const [isMobile, setIsMobile] = React.useState(false)
 
-  React.useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 768)
-    }
-    checkMobile()
-    window.addEventListener('resize', checkMobile)
-    return () => {
-      window.removeEventListener('resize', checkMobile)
-    }
-  }, [])
-
-  const scaleDimensions = () => {
-    return isMobile ? [1,1] : [1, 1]
-  }
 
   const rotate = useTransform(scrollYProgress, [0, 0], [20, 10])
   const translate = useTransform(scrollYProgress, [0, 1], [0, -200])

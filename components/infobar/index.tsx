@@ -1,8 +1,7 @@
 "use client";
 
 import React from 'react';
-import { cn } from "@/lib/utils"; // Assuming this imports the utility for class merging
-import { GoogleGeminiEffect } from "@/components/global/google-gemini-effect"; // Adjust the import path as necessary
+import { GoogleGeminiEffect } from "@/components/global/google-gemini-effect";
 import { useScroll, useTransform } from "framer-motion";
 
 const InfoBar = () => {

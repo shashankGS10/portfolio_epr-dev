@@ -1,9 +1,8 @@
 'use client'
-import type { NextPage } from 'next'
 import React from 'react'
 import { useEffect, useState } from 'react'
 import Particles, { initParticlesEngine } from '@tsparticles/react'
-import type { Container, Engine } from '@tsparticles/engine'
+import type { Container } from '@tsparticles/engine'
 import { loadSlim } from '@tsparticles/slim'
 
 import { motion, useAnimation } from 'framer-motion'
@@ -58,6 +57,7 @@ export const SparklesCore = (props: ParticlesProps) => {
       animate={controls}
       className={cn('opacity-0', className)}
     >
+      
       {init && (
         <Particles
           id={id || 'tsparticles'}
@@ -85,6 +85,7 @@ export const SparklesCore = (props: ParticlesProps) => {
                   enable: false,
                   mode: 'repulse',
                 },
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
                 resize: true as any,
               },
               modes: {
@@ -162,6 +163,7 @@ export const SparklesCore = (props: ParticlesProps) => {
                 close: true,
                 fill: true,
                 options: {},
+              // eslint-disable-next-line @typescript-eslint/no-empty-object-type
                 type: {} as any,
               },
               groups: {},

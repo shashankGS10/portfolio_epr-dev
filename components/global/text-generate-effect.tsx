@@ -15,8 +15,8 @@ export const TextGenerateEffect = ({
   duration?: number;
 }) => {
   const [scope, animate] = useAnimate();
-  let wordsArray = words.split(" ");
-
+  const wordsArray = words.split(" ");
+// eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     animate(
       "span",

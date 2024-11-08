@@ -1,8 +1,6 @@
-import React, { Suspense, useRef, useState } from "react";
+import React, { Suspense, useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { ContactShadows, Environment } from "@react-three/drei";
-import { PerspectiveCamera } from 'three';
-import { useTransition, animated } from '@react-spring/web';
 import DreamRoom from "./DreamRoom";
 import { TextGenerateEffect } from "../global/text-generate-effect";
 

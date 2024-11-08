@@ -36,11 +36,13 @@ export type EditorCanvasTypes =
   | 'Action'
   | 'Wait'
 
+
 export type EditorCanvasCardType = {
   title: string
   description: string
   completed: boolean
   current: boolean
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   metadata: any
   type: EditorCanvasTypes
 }
