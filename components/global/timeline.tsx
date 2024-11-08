@@ -22,7 +22,7 @@ interface TimelineContent {
 
 interface TimelineEntry {
   title: string;
-  category: "education" | "work" | "project";
+  category: string;
   content: TimelineContent;
 }
 

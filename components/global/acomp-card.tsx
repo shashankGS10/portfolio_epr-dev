@@ -101,6 +101,9 @@ export const CardItem = ({
   rotateX = 0,
   rotateY = 0,
   rotateZ = 0,
+  href,
+  target,
+  rel,
   ...rest
 }: {
   as?: React.ElementType
@@ -112,6 +115,9 @@ export const CardItem = ({
   rotateX?: number | string
   rotateY?: number | string
   rotateZ?: number | string
+  href?: string;
+  target?: string;
+  rel?: string;
 }) => {
   const ref = useRef<HTMLDivElement>(null)
   const [isMouseEntered] = useMouseEnter()

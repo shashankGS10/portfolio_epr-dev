@@ -85,7 +85,7 @@ export const SparklesCore = (props: ParticlesProps) => {
                   enable: false,
                   mode: 'repulse',
                 },
-                // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                // eslint-disable-next-line  @typescript-eslint/no-explicit-any
                 resize: true as any,
               },
               modes: {
@@ -163,7 +163,7 @@ export const SparklesCore = (props: ParticlesProps) => {
                 close: true,
                 fill: true,
                 options: {},
-              // eslint-disable-next-line @typescript-eslint/no-empty-object-type
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
                 type: {} as any,
               },
               groups: {},
