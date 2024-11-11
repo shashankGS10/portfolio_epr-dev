@@ -196,5 +196,19 @@ export const products = [
     title: 'Kampao.in',
     link: 'https://www.youtube.com/watch?v=CZFJmiYIMPE',
     thumbnail: '/labour_mart.png',
+  },{
+    title: 'PropertyFunda.in',
+    link: 'https://propertyfunda.in',
+    thumbnail: '/propertyfunda-thumbnail.png',
+  },
+  {
+    title: 'IIM Bangalore Launchpad',
+    link: 'https://www.linkedin.com/posts/suryansh-p-416a88235_indianstartups-nsrcel-launchpad-activity-7158382723319975936-bStK?utm_source=share&utm_medium=member_desktop',
+    thumbnail: '/iim-bangalore-thumbnail.png',
+  },
+  {
+    title: 'T-Hub Hyderabad Lab32',
+    link: 'https://programs.t-hub.co/lab-32-directory/',
+    thumbnail: '/thub-thumbnail.png',
   },
 ];

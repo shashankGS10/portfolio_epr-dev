@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 'use client'
-import React, { useRef } from 'react'
+import React, { useRef  } from 'react'
 import { useScroll, useTransform, motion } from 'framer-motion'
 import StarryNight from "../Scene/StarryNight"
 
@@ -14,14 +14,12 @@ export const ContainerScroll = ({
     target: containerRef,
   })
 
-
-
   const rotate = useTransform(scrollYProgress, [0, 0], [20, 10])
   const translate = useTransform(scrollYProgress, [0, 1], [0, -200])
 
   return (
     <div
-      className="h-[80rem] flex items-center justify-center relative p-20"
+      className="h-[40rem] lg:h-[70rem] flex items-center justify-center relative mb-40"
       ref={containerRef}
     >
       <div
@@ -42,7 +40,7 @@ export const ContainerScroll = ({
           }}
           className="max-w-5xl -mt-12 mx-auto h-[40rem] w-full p-6 bg-[#222222] rounded-[30px] shadow-2xl"
         >
-          <StarryNight/>
+        <StarryNight />
         </motion.div>
       </div>
     </div>

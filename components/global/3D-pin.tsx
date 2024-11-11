@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
@@ -20,6 +20,14 @@ export const PinContainer = ({
   const [transform, setTransform] = useState(
     "translate(-50%,-50%) rotateX(0deg)"
   );
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) return null;
+
 
   const onMouseEnter = () => {
     setTransform("translate(-50%,-50%) rotateX(40deg) scale(0.8)");

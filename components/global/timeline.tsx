@@ -55,7 +55,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
       className="w-full bg-white dark:bg-neutral-950 font-sans md:px-10"
       ref={containerRef}
     >
-       <motion.h1
+      <motion.h1
         initial={{ opacity: 0.5, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{
@@ -90,31 +90,31 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
               <Card className="rounded-xl border shadow bg-white dark:bg-neutral-950">
                 <CardHeader>
                   <CardDescription className="text-lg md:text-xl space-y-4">
-                     {item.category === "education" && (
-    <div>
-      <p>
-        <strong>{item.content.degree}</strong> in {item.content.field}
-      </p>
-      <p>{item.content.institution}</p>
-    </div>
-  )}
-  {item.category === "work" && (
-    <div>
-      <p>
-        <strong>{item.content.company}</strong> - {item.content.role}
-      </p>
-      <p>Location: {item.content.location}</p>
-      <p>Tech Stack: {item.content.techStack}</p>
-    </div>
-  )}
-  {item.category === "project" && (
-    <div>
-      <p>
-        <strong>{item.content.company}</strong> - {item.content.role}
-      </p>
-      <p>Location: {item.content.location}</p>
-    </div>
-  )}
+                    {item.category === "education" && (
+                      <div>
+                        <p>
+                          <strong>{item.content.degree}</strong> in {item.content.field}
+                        </p>
+                        <p>{item.content.institution}</p>
+                      </div>
+                    )}
+                    {item.category === "work" && (
+                      <div>
+                        <p>
+                          <strong>{item.content.company}</strong> - {item.content.role}
+                        </p>
+                        <p>Location: {item.content.location}</p>
+                        <p>Tech Stack: {item.content.techStack}</p>
+                      </div>
+                    )}
+                    {item.category === "project" && (
+                      <div>
+                        <p>
+                          <strong>{item.content.company}</strong> - {item.content.role}
+                        </p>
+                        <p>Location: {item.content.location}</p>
+                      </div>
+                    )}
                   </CardDescription>
                 </CardHeader>
 

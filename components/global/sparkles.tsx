@@ -30,14 +30,15 @@ export const SparklesCore = (props: ParticlesProps) => {
     particleColor,
     particleDensity,
   } = props
-  const [init, setInit] = useState(false)
+  
+
   useEffect(() => {
     initParticlesEngine(async (engine) => {
       await loadSlim(engine)
     }).then(() => {
-      setInit(true)
+     console.log("starsShoot")
     })
-  }, [])
+  })
   const controls = useAnimation()
 
   const particlesLoaded = async (container?: Container) => {
@@ -58,7 +59,7 @@ export const SparklesCore = (props: ParticlesProps) => {
       className={cn('opacity-0', className)}
     >
       
-      {init && (
+      
         <Particles
           id={id || 'tsparticles'}
           className={cn('h-full w-full')}
@@ -85,8 +86,6 @@ export const SparklesCore = (props: ParticlesProps) => {
                   enable: false,
                   mode: 'repulse',
                 },
-                // eslint-disable-next-line  @typescript-eslint/no-explicit-any
-                resize: true as any,
               },
               modes: {
                 push: {
@@ -435,7 +434,6 @@ export const SparklesCore = (props: ParticlesProps) => {
             detectRetina: true,
           }}
         />
-      )}
     </motion.div>
   )
 }

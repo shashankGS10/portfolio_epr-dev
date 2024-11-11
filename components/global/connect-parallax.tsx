@@ -9,6 +9,7 @@ import {
 } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import CoderBoy from "@/public/images/profiles/coderBoy.png"
 
 export const HeroParallax = ({
   products,
@@ -35,7 +36,7 @@ export const HeroParallax = ({
     springConfig
   );
   const translateXReverse = useSpring(
-    useTransform(scrollYProgress, [0, 1], [0, -1000]),
+    useTransform(scrollYProgress, [0, 1], [0, -500]),
     springConfig
   );
   const rotateX = useSpring(
@@ -51,13 +52,13 @@ export const HeroParallax = ({
     springConfig
   );
   const translateY = useSpring(
-    useTransform(scrollYProgress, [0, 0.2], [-700, 500]),
+    useTransform(scrollYProgress, [0, 0.2], [-200, 50]),
     springConfig
   );
   return (
     <div
       ref={ref}
-      className="h-[300vh] py-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+      className="h-[260vh] pt-40 pb-20  overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
     >
       <Header />
       <motion.div
@@ -103,14 +104,27 @@ export const HeroParallax = ({
 
 export const Header = () => {
   return (
-    <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full  left-0 top-0">
+    <>
+    <div className="max-w-7xl relative mx-auto py-20 md:pb-40 md:pt-10 px-4 w-full flex items-center justify-between">
+    <div className="w-full md:w-1/2">
       <h1 className="text-2xl md:text-7xl font-bold dark:text-white">
         Hello! 👋 <br /> I&apos;m Shashank
       </h1>
       <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">
-      Over the past 5 years, I’ve been working with React.js, React Native and Node.js, preferably Front End Web and Mobile development. I co-founded Kampao.in, a SaaS platform that helps blue-collar workers to find jobs. Have been part of Entrepreneurship programs led by IIM Bangalore and T-Hub Hyderabad to ensure product market fit and agile development of SaaS product. Proven ability to lead UI development teams and deliver quality, user-centric products.
+        Over the past 5 years, I’ve been working with React.js, React Native and Node.js, preferably Front End Web and Mobile development. I co-founded Kampao.in, a SaaS platform that helps blue-collar workers to find jobs. Have been part of Entrepreneurship programs led by IIM Bangalore and T-Hub Hyderabad to ensure product market fit and agile development of SaaS product. Proven ability to lead UI development teams and deliver quality, user-centric products.
       </p>
     </div>
+    <div className="w-full md:w-1/2 mt-8 md:mt-0">
+      <Image 
+        src={CoderBoy} 
+        alt="Shashank's image" 
+        width={500} 
+        height={500} 
+        className="rounded-lg shadow-lg"
+      />
+    </div>
+  </div>
+    </>
   );
 };
 
@@ -134,7 +148,7 @@ export const ProductCard = ({
         y: -20,
       }}
       key={product.title}
-      className="group/product h-96 w-[30rem] relative flex-shrink-0"
+      className="group/product opacity-75 h-80 w-[30rem] relative flex-shrink-0"
     >
       <Link
         href={product.link}

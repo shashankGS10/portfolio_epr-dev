@@ -8,7 +8,7 @@ export function LampEffect() {
   return (
     <LampContainer>
       <motion.h1
-        initial={{ opacity: 0.5, y: 100 }}
+        initial={{ opacity: 0.5, y: 0 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{
           delay: 0.3,
@@ -17,8 +17,9 @@ export function LampEffect() {
         }}
         className="mt-8 bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl"
       >
-        A Breif About Work <br /> And<br /> Experiences
+         A Breif About My <br /> Initiatives
       </motion.h1>
+
     </LampContainer>
   );
 }
@@ -33,10 +34,11 @@ export const LampContainer = ({
   return (
     <div
       className={cn(
-        "relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-black w-full rounded-md z-0",
+        "relative flex h-screen flex-col items-center justify-center overflow-hidden bg-black w-full rounded-md z-0",
         className
       )}
     >
+      {/* Looks sexy if you remove flex-1 underneath */}
       <div className="relative flex w-full flex-1 scale-y-125 items-center justify-center isolate z-0 ">
         <motion.div
           initial={{ opacity: 0.5, width: "15rem" }}
@@ -94,20 +96,22 @@ export const LampContainer = ({
           className="absolute inset-auto z-50 h-0.5 w-[30rem] -translate-y-[7rem] bg-amber-400 "
         ></motion.div>
            <div className="w-[40rem] h-40 relative">
+            {/* There is abug in sparkles, onlye getting rendered for 1st card, strange check later */}
+            {/* <h1>Im sparkle </h1>
           <SparklesCore
             background="transparent"
             minSize={0.4}
             maxSize={1}
             particleDensity={1200}
-            className="w-full h-full"
+            className="h-full"
             particleColor="#FFFFFF"
-          />
+          /> */}
         </div>
         <div className="absolute inset-auto z-40 h-44 w-full -translate-y-[12.5rem] bg-black "></div>
       </div>
 
       <div className="relative z-50 flex -translate-y-80 flex-col items-center px-5">
-        {children}
+      {children}
       </div>
     </div>
   );
