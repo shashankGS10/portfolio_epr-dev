@@ -14,7 +14,6 @@ import InfoBar from "@/components/infobar/"
 import ProjectCards from "@/components/projectCards"
 
 const timelineData = [
-  // Education Entry
   {
     title: "2014 - 2018",
     category: "education",
@@ -24,8 +23,6 @@ const timelineData = [
       institution: "SSTC FET, CSVTU, Bhilai, CG",
     },
   },
-
-  // Work Experience Entries
   {
     title: "April 2020 - May 2021",
     category: "work",
@@ -68,17 +65,15 @@ const timelineData = [
   })).reverse(),
 ];
 export default function Home() {
-  const isMobile = useIsMobile();
+  
   return (
     <main>
       <Navbar />
       <section>
         <HeroParallax products={products}></HeroParallax>
       </section>
-      <section >
       <ProjectCards/>
-        </section>
-      <section>
+        <section>
         <ContainerScroll
         titleComponent={
           <div className="flex items-center flex-col">
@@ -89,8 +84,6 @@ export default function Home() {
           </div>
         }
       />
-        
-{/* till here ---- */}
       </section>
       <InfiniteMovingCards
         items={techStackImages}

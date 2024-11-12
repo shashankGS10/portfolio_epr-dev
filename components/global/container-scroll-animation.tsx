@@ -2,6 +2,7 @@
 'use client'
 import React, { useRef  } from 'react'
 import { useScroll, useTransform, motion } from 'framer-motion'
+import { useIsMobile } from '@/lib/hooks/useIsMobile'
 import StarryNight from "../Scene/StarryNight"
 
 export const ContainerScroll = ({
@@ -9,16 +10,20 @@ export const ContainerScroll = ({
 }: {
   titleComponent: string | React.ReactNode
 }) => {
+  const isMobile = useIsMobile();
   const containerRef = useRef<any>(null)
   const { scrollYProgress } = useScroll({
     target: containerRef,
   })
+  
 
   const rotate = useTransform(scrollYProgress, [0, 0], [20, 10])
   const translate = useTransform(scrollYProgress, [0, 1], [0, -200])
 
   return (
-    <div
+     <>
+      {!isMobile ? (
+        <div
       className="h-[40rem] lg:h-[70rem] flex items-center justify-center relative mb-40"
       ref={containerRef}
     >
@@ -43,7 +48,10 @@ export const ContainerScroll = ({
         <StarryNight />
         </motion.div>
       </div>
-    </div>
+    </div>):(
+        <div className="w-full border-t-4 border-yellow-500 mt-4"></div>
+      )}
+    </>
   )
 }
 

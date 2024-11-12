@@ -22,11 +22,11 @@ const ProjectCards = () => {
          A Breif About My <br /> Initiatives
       </motion.h1>
 
-  <div className="flex overflow-x-auto space-x-2 p-2 scrollbar-hidden">
+  <div className="flex overflow-x-auto space-x-1 scrollbar-hidden">
     {projectData.map((project, index) => (
-      <CardContainer key={index} className="relative inter-var mx-10 group">
+      <CardContainer key={index} className="relative inter-var mx-5 group">
         <LampContainer>
-        <CardBody className="relative w-full md:w-[350px] h-[24rem] rounded-xl p-6 border dark:border-[#E2CBFF] border-black/[0.1] overflow-hidden">
+        <CardBody className="relative w-full md:w-[350px] h-[24rem] sm:h-[20rem] rounded-xl p-2 border dark:border-[#E2CBFF] border-black/[0.1] overflow-hidden">
           <div className="absolute inset-0 z-0 transition-all duration-500 group-hover:scale-90 group-hover:opacity-100 opacity-0 scale-90">
             <Image
               src={project.screenshot}
