@@ -20,7 +20,7 @@ const InfoBar = () => {
   const pathLengthFifth = useTransform(scrollYProgress, [0, 0.8], [0, 1.2]);
 
   const handleDownload = () => {
-    const resumeFilePath = "/docs/shashankgs_frontend.pdf";
+    const resumeFilePath = "/docs/shashank-frontend.pdf";
     saveAs(resumeFilePath, "resume_shashankgs.pdf");
   };
 
